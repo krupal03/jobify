@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Jobify.Models.Recruiter>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container" style="margin-top:7%;">
+    <h2>All</h2>
+
+        <table class="table" id="datatable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.AspNetUser.FullName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AspNetUser.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AspNetUser.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AspNetUser.PhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Link)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AspNetUser.CreatedAt)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(model => item.AspNetUser.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.AspNetUser.Address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.AspNetUser.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.AspNetUser.PhoneNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.Link)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => item.AspNetUser.CreatedAt)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        @Html.ActionLink("Detail", "Details", new { id = item.Id })
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    @section Scripts{
+        <script>
+          $(document).ready(function () { $('#datatable').DataTable(); });
+        </script>
+    }
+</div>

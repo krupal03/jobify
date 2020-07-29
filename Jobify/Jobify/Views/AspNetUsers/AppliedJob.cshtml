@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Jobify.Models.JobApply>
+
+@{
+    ViewBag.Title = "AppliedJob";
+}
+<div class="container" style="margin-top:7%;">
+    <h2>AppliedJob</h2>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplyAt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Why_Should_we_hire_you_)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Whats_your_dream_job_)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Job.JobType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resume.Name)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplyAt)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Why_Should_we_hire_you_)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Whats_your_dream_job_)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobStatus)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Job.JobType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Resume.Name)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+    <p>
+
+        @Html.ActionLink("Back to List", "Index", "AspNetUsers")
+    </p>
+</div>

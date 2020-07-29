@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="Model.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="Model.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="Model.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserRoles">
+      <EntityTypeMapping TypeName="Model.AspNetUserRole">
+        <MappingFragment StoreEntitySet="AspNetUserRoles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="AssignAt" ColumnName="AssignAt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="Model.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="Model.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobType" ColumnName="JobType" />
+          <ScalarProperty Name="JobLocation" ColumnName="JobLocation" />
+          <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="JobSeeker" ColumnName="JobSeeker" />
+          <ScalarProperty Name="RecruiterId" ColumnName="RecruiterId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobApplies">
+      <EntityTypeMapping TypeName="Model.JobApply">
+        <MappingFragment StoreEntitySet="JobApply">
+          <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+          <ScalarProperty Name="Whats_your_dream_job_" ColumnName="Whats your dream job?" />
+          <ScalarProperty Name="Why_Should_we_hire_you_" ColumnName="Why Should we hire you?" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplyAt" ColumnName="ApplyAt" />
+          <ScalarProperty Name="ResumeId" ColumnName="ResumeId" />
+          <ScalarProperty Name="JobId" ColumnName="JobId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recruiters">
+      <EntityTypeMapping TypeName="Model.Recruiter">
+        <MappingFragment StoreEntitySet="Recruiter">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resumes">
+      <EntityTypeMapping TypeName="Model.Resume">
+        <MappingFragment StoreEntitySet="Resume">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Dob" ColumnName="Dob" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResumeFiles">
+      <EntityTypeMapping TypeName="Model.ResumeFile">
+        <MappingFragment StoreEntitySet="ResumeFile">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UploadedAt" ColumnName="UploadedAt" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="ResumeId" ColumnName="ResumeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

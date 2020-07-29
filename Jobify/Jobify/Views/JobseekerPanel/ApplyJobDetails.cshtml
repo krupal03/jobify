@@ -1,0 +1,65 @@
+﻿@model Jobify.Models.JobApply
+
+@{
+    ViewBag.Title = "ApplyJobDetails";
+}
+<div class="container" style="margin-top:7%;">
+    <h2>ApplyJobDetails</h2>
+
+    <div>
+        <h4>JobApply</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ApplyAt)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ApplyAt)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Why_Should_we_hire_you_)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Why_Should_we_hire_you_)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Whats_your_dream_job_)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Whats_your_dream_job_)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.JobStatus)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.JobStatus)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Job.JobType)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Job.JobType)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Resume.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Resume.Name)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</div>

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Jobify.Models.Job>
+
+@{
+    ViewBag.Title = "Job";
+}
+<div class="container" style="margin-top:7%;">
+
+
+<h2>Job</h2>
+
+<p>
+    @Html.ActionLink("Create New", "JobCreate")
+</p>
+<table id="datatable" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.JobType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Experience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobSeeker)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Recruiter.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobTitle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Experience)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.JobSeeker)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Recruiter.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "JobEdit", new { id = item.Id }) 
+                    @Html.ActionLink("Details", "ApplyDetails", new { id = item.Id }) 
+                    @Html.ActionLink("Delete", "JobDelete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    @section Scripts{
+        <script>
+          $(document).ready(function () { $('#datatable').DataTable(); });
+        </script>
+    }
+</div>
+

@@ -1,0 +1,43 @@
+﻿@model Jobify.Models.AspNetUserRole
+
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container" style="margin-top:7%;">
+    <h2>Details</h2>
+
+    <div>
+        <h4>Role</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.AssignAt)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AssignAt)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AspNetRole.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AspNetRole.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AspNetUser.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AspNetUser.FullName)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+      
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

@@ -1,0 +1,92 @@
+﻿@model Jobify.Models.AspNetUser
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+
+<div class="container" style="margin-top:7%;">
+    <h2>Edit</h2>
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>Profile</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.FullName, new { htmlAttributes = new { @class = "form-control" ,required="required"} })
+                    @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            @Html.HiddenFor(m => m.CreatedAt)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @Html.HiddenFor(model => model.EmailConfirmed)
+
+        @Html.HiddenFor(model => model.PasswordHash)
+        @Html.HiddenFor(model => model.SecurityStamp)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+            @Html.HiddenFor(model => model.PhoneNumberConfirmed)
+
+            @Html.HiddenFor(model => model.TwoFactorEnabled)
+
+            @Html.HiddenFor(model => model.LockoutEndDateUtc)
+
+         @Html.HiddenFor(model => model.LockoutEnabled)
+
+        @Html.HiddenFor(model => model.AccessFailedCount)
+
+        @Html.HiddenFor(model => model.UserName)
+
+
+
+
+        @Html.HiddenFor(model => model.Role)
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+    }
+
+    <div>
+        @Html.ActionLink("Back", "Index")
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

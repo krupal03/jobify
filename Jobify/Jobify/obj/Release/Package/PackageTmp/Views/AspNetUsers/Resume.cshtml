@@ -1,0 +1,93 @@
+﻿@model Jobify.Models.Resume
+
+@{
+    ViewBag.Title = "Resume";
+}
+<div class="container" style="margin-top:7%;">
+    <h2>Resume</h2>
+
+    <div>
+        <h4>Resume</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Dob)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Dob)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Gender)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Gender)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Experience)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Experience)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.MobileNo)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.MobileNo)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Qualification)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Qualification)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AspNetUser.FullName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AspNetUser.FullName)
+            </dd>
+            <dd>
+                <a href="@ViewBag.Path">Resume File</a>
+            </dd>
+        </dl>
+    </div>
+    <p>
+        
+        @Html.ActionLink("Back to List", "Index","AspNetUsers")
+    </p>
+</div>

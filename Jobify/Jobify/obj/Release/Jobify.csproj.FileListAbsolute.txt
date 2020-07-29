@@ -1,0 +1,144 @@
+F:\Jobify\Jobify\Jobify\bin\roslyn\csc.exe
+F:\Jobify\Jobify\Jobify\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Jobify\Jobify\Jobify\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Jobify\Jobify\Jobify\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Jobify\Jobify\Jobify\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Jobify\Jobify\Jobify\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Jobify\Jobify\Jobify\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Jobify\Jobify\Jobify\bin\roslyn\System.Collections.Immutable.dll
+F:\Jobify\Jobify\Jobify\bin\roslyn\System.Reflection.Metadata.dll
+F:\Jobify\Jobify\Jobify\bin\roslyn\vbc.exe
+F:\Jobify\Jobify\Jobify\bin\roslyn\VBCSCompiler.exe
+F:\Jobify\Jobify\Jobify\bin\roslyn\VBCSCompiler.exe.config
+F:\Jobify\Jobify\Jobify\bin\Jobify.dll.config
+F:\Jobify\Jobify\Jobify\bin\Jobify.dll
+F:\Jobify\Jobify\Jobify\bin\Jobify.pdb
+F:\Jobify\Jobify\Jobify\bin\Antlr3.Runtime.dll
+F:\Jobify\Jobify\Jobify\bin\EntityFramework.dll
+F:\Jobify\Jobify\Jobify\bin\EntityFramework.SqlServer.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Google.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Web.Infrastructure.dll
+F:\Jobify\Jobify\Jobify\bin\Newtonsoft.Json.dll
+F:\Jobify\Jobify\Jobify\bin\Owin.dll
+F:\Jobify\Jobify\Jobify\bin\System.Web.Helpers.dll
+F:\Jobify\Jobify\Jobify\bin\System.Web.Mvc.dll
+F:\Jobify\Jobify\Jobify\bin\System.Web.Optimization.dll
+F:\Jobify\Jobify\Jobify\bin\System.Web.Razor.dll
+F:\Jobify\Jobify\Jobify\bin\System.Web.WebPages.Deployment.dll
+F:\Jobify\Jobify\Jobify\bin\System.Web.WebPages.dll
+F:\Jobify\Jobify\Jobify\bin\System.Web.WebPages.Razor.dll
+F:\Jobify\Jobify\Jobify\bin\WebGrease.dll
+F:\Jobify\Jobify\Jobify\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Google.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Jobify\Jobify\Jobify\bin\Newtonsoft.Json.xml
+F:\Jobify\Jobify\Jobify\bin\System.Web.Helpers.xml
+F:\Jobify\Jobify\Jobify\bin\System.Web.Mvc.xml
+F:\Jobify\Jobify\Jobify\bin\System.Web.Optimization.xml
+F:\Jobify\Jobify\Jobify\bin\System.Web.Razor.xml
+F:\Jobify\Jobify\Jobify\bin\System.Web.WebPages.xml
+F:\Jobify\Jobify\Jobify\bin\System.Web.WebPages.Deployment.xml
+F:\Jobify\Jobify\Jobify\bin\System.Web.WebPages.Razor.xml
+F:\Jobify\Jobify\Jobify\bin\Antlr3.Runtime.pdb
+F:\Jobify\Jobify\Jobify\bin\EntityFramework.xml
+F:\Jobify\Jobify\Jobify\bin\EntityFramework.SqlServer.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Jobify\Jobify\Jobify\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Jobify\Jobify\Jobify\obj\Release\Jobify.Migrations.InitialCreate.resources
+F:\Jobify\Jobify\Jobify\obj\Release\Jobify.Migrations.init.resources
+F:\Jobify\Jobify\Jobify\obj\Release\Jobify.csproj.GenerateResource.Cache
+F:\Jobify\Jobify\Jobify\obj\Release\Jobify.dll
+F:\Jobify\Jobify\Jobify\obj\Release\Jobify.pdb
+F:\Jobify\Jobify\Jobify\obj\Release\Jobify.csprojResolveAssemblyReference.cache
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\csc.exe
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\vbc.exe
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\VBCSCompiler.exe
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Jobify.dll.config
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Jobify.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Jobify.pdb
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Antlr3.Runtime.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\EntityFramework.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\EntityFramework.SqlServer.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Newtonsoft.Json.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Owin.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Helpers.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Mvc.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Optimization.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Razor.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.WebPages.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.WebPages.Razor.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\WebGrease.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Newtonsoft.Json.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Helpers.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Mvc.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Optimization.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.Razor.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.WebPages.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\System.Web.WebPages.Razor.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Antlr3.Runtime.pdb
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\EntityFramework.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\EntityFramework.SqlServer.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\obj\Release\Jobify.csprojResolveAssemblyReference.cache
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\obj\Release\Jobify.Migrations.InitialCreate.resources
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\obj\Release\Jobify.Migrations.init.resources
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\obj\Release\Jobify.csproj.GenerateResource.Cache
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\obj\Release\Jobify.dll
+C:\Users\Prash\Documents\Visual Studio 2015\Projects\Jobify\Jobify\obj\Release\Jobify.pdb

@@ -1,0 +1,49 @@
+﻿@model Jobify.Models.ResumeFile
+
+@{
+    ViewBag.Title = "ResumeFile";
+}
+<div class="container" style="margin-top:7%;">
+<h2>ResumeFile</h2>
+
+<div>
+    <h4>ResumeFile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UploadedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UploadedAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Path)
+        </dt>
+
+        <dd>
+            @if(Model.Path!= "~/ADD RESUME")
+            {
+                <a href="@Model.Path" >@Model.Path</a>
+            }
+            else
+            {
+               @Html.DisplayFor(model => model.Path)
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Resume.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resume.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <h3>  @Html.ActionLink("Edit", "ResumeFileEdit", new { id = Model.Id }) </h3>
+</p>
+    </div>

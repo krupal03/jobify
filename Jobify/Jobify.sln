@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobify", "Jobify\Jobify.csproj", "{A88CE089-9250-48CE-A1C3-01304C4D496C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobify.Tests", "Jobify.Tests\Jobify.Tests.csproj", "{2574BB50-8194-4592-B095-043C3CA1E0CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A88CE089-9250-48CE-A1C3-01304C4D496C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88CE089-9250-48CE-A1C3-01304C4D496C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88CE089-9250-48CE-A1C3-01304C4D496C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A88CE089-9250-48CE-A1C3-01304C4D496C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2574BB50-8194-4592-B095-043C3CA1E0CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2574BB50-8194-4592-B095-043C3CA1E0CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2574BB50-8194-4592-B095-043C3CA1E0CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2574BB50-8194-4592-B095-043C3CA1E0CB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

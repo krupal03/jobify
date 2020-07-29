@@ -1,0 +1,805 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="AssignAt" Type="date" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Role" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JobType" Type="varchar" MaxLength="50" />
+          <Property Name="JobLocation" Type="varchar(max)" />
+          <Property Name="JobTitle" Type="varchar" MaxLength="50" />
+          <Property Name="Salary" Type="int" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="JobSeeker" Type="int" />
+          <Property Name="RecruiterId" Type="int" />
+          <Property Name="Description" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="JobApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplyAt" Type="date" />
+          <Property Name="ResumeId" Type="int" />
+          <Property Name="JobId" Type="int" />
+          <Property Name="Why Should we hire you?" Type="varchar(max)" />
+          <Property Name="Whats your dream job?" Type="varchar(max)" />
+          <Property Name="JobStatus" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Recruiter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" />
+          <Property Name="Link" Type="varchar(max)" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="Resume">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Dob" Type="date" />
+          <Property Name="Gender" Type="varchar" MaxLength="50" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="Address" Type="varchar(max)" />
+          <Property Name="MobileNo" Type="nchar" MaxLength="10" />
+          <Property Name="Qualification" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="ResumeFile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UploadedAt" Type="date" />
+          <Property Name="Path" Type="varchar(max)" />
+          <Property Name="ResumeId" Type="int" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_ToTable">
+          <End Role="Recruiter" Type="Self.Recruiter" Multiplicity="0..1" />
+          <End Role="Job" Type="Self.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Recruiter">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="RecruiterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JobApply_ToTable">
+          <End Role="Resume" Type="Self.Resume" Multiplicity="0..1" />
+          <End Role="JobApply" Type="Self.JobApply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resume">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JobApply">
+              <PropertyRef Name="ResumeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JobApply_ToTable_1">
+          <End Role="Job" Type="Self.Job" Multiplicity="0..1" />
+          <End Role="JobApply" Type="Self.JobApply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JobApply">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Recruiter_ToTable">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="Recruiter" Type="Self.Recruiter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Recruiter">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resume_ToTable">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="Resume" Type="Self.Resume" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Resume">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ResumeFile_ToTable">
+          <End Role="Resume" Type="Self.Resume" Multiplicity="0..1" />
+          <End Role="ResumeFile" Type="Self.ResumeFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resume">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ResumeFile">
+              <PropertyRef Name="ResumeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JobApply" EntityType="Self.JobApply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Recruiter" EntityType="Self.Recruiter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resume" EntityType="Self.Resume" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ResumeFile" EntityType="Self.ResumeFile" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_ToTable" Association="Self.FK_Job_ToTable">
+            <End Role="Recruiter" EntitySet="Recruiter" />
+            <End Role="Job" EntitySet="Job" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JobApply_ToTable" Association="Self.FK_JobApply_ToTable">
+            <End Role="Resume" EntitySet="Resume" />
+            <End Role="JobApply" EntitySet="JobApply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JobApply_ToTable_1" Association="Self.FK_JobApply_ToTable_1">
+            <End Role="Job" EntitySet="Job" />
+            <End Role="JobApply" EntitySet="JobApply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Recruiter_ToTable" Association="Self.FK_Recruiter_ToTable">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Recruiter" EntitySet="Recruiter" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resume_ToTable" Association="Self.FK_Resume_ToTable">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Resume" EntitySet="Resume" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ResumeFile_ToTable" Association="Self.FK_ResumeFile_ToTable">
+            <End Role="Resume" EntitySet="Resume" />
+            <End Role="ResumeFile" EntitySet="ResumeFile" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserRoles" Relationship="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" FromRole="AspNetRoles" ToRole="AspNetUserRoles" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaims" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderKey" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogins" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUserRole">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="RoleId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AssignAt" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="AspNetRole" Relationship="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" FromRole="AspNetUserRoles" ToRole="AspNetRoles" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" FromRole="AspNetUserRoles" ToRole="AspNetUsers" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+          <NavigationProperty Name="AspNetUserRoles" Relationship="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserRoles" />
+          <NavigationProperty Name="Recruiters" Relationship="Self.FK_Recruiter_ToTable" FromRole="AspNetUsers" ToRole="Recruiter" />
+          <NavigationProperty Name="Resumes" Relationship="Self.FK_Resume_ToTable" FromRole="AspNetUsers" ToRole="Resume" />
+          <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Job">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JobType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JobLocation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="JobTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Salary" Type="Int32" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="JobSeeker" Type="Int32" />
+          <Property Name="RecruiterId" Type="Int32" />
+          <NavigationProperty Name="Recruiter" Relationship="Self.FK_Job_ToTable" FromRole="Job" ToRole="Recruiter" />
+          <NavigationProperty Name="JobApplies" Relationship="Self.FK_JobApply_ToTable_1" FromRole="Job" ToRole="JobApply" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="JobApply">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplyAt" Type="DateTime" Precision="0" />
+          <Property Name="ResumeId" Type="Int32" />
+          <Property Name="JobId" Type="Int32" />
+          <NavigationProperty Name="Job" Relationship="Self.FK_JobApply_ToTable_1" FromRole="JobApply" ToRole="Job" />
+          <NavigationProperty Name="Resume" Relationship="Self.FK_JobApply_ToTable" FromRole="JobApply" ToRole="Resume" />
+          <Property Name="Why_Should_we_hire_you_" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Whats_your_dream_job_" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="JobStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Recruiter">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Recruiter_ToTable" FromRole="Recruiter" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Jobs" Relationship="Self.FK_Job_ToTable" FromRole="Recruiter" ToRole="Job" />
+        </EntityType>
+        <EntityType Name="Resume">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dob" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="MobileNo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="Self.FK_Resume_ToTable" FromRole="Resume" ToRole="AspNetUsers" />
+          <NavigationProperty Name="JobApplies" Relationship="Self.FK_JobApply_ToTable" FromRole="Resume" ToRole="JobApply" />
+          <NavigationProperty Name="ResumeFiles" Relationship="Self.FK_ResumeFile_ToTable" FromRole="Resume" ToRole="ResumeFile" />
+        </EntityType>
+        <EntityType Name="ResumeFile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UploadedAt" Type="DateTime" Precision="0" />
+          <Property Name="Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="ResumeId" Type="Int32" />
+          <NavigationProperty Name="Resume" Relationship="Self.FK_ResumeFile_ToTable" FromRole="ResumeFile" ToRole="Resume" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRole" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRole" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Recruiter_ToTable">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+          <End Role="Recruiter" Type="Self.Recruiter" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Recruiter">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resume_ToTable">
+          <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="0..1" />
+          <End Role="Resume" Type="Self.Resume" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Resume">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Job_ToTable">
+          <End Role="Recruiter" Type="Self.Recruiter" Multiplicity="0..1" />
+          <End Role="Job" Type="Self.Job" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Recruiter">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Job">
+              <PropertyRef Name="RecruiterId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JobApply_ToTable_1">
+          <End Role="Job" Type="Self.Job" Multiplicity="0..1" />
+          <End Role="JobApply" Type="Self.JobApply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Job">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JobApply">
+              <PropertyRef Name="JobId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JobApply_ToTable">
+          <End Role="Resume" Type="Self.Resume" Multiplicity="0..1" />
+          <End Role="JobApply" Type="Self.JobApply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resume">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JobApply">
+              <PropertyRef Name="ResumeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ResumeFile_ToTable">
+          <End Role="Resume" Type="Self.Resume" Multiplicity="0..1" />
+          <End Role="ResumeFile" Type="Self.ResumeFile" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resume">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ResumeFile">
+              <PropertyRef Name="ResumeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRole" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+          <EntitySet Name="Jobs" EntityType="Self.Job" />
+          <EntitySet Name="JobApplies" EntityType="Self.JobApply" />
+          <EntitySet Name="Recruiters" EntityType="Self.Recruiter" />
+          <EntitySet Name="Resumes" EntityType="Self.Resume" />
+          <EntitySet Name="ResumeFiles" EntityType="Self.ResumeFile" />
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Recruiter_ToTable" Association="Self.FK_Recruiter_ToTable">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Recruiter" EntitySet="Recruiters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resume_ToTable" Association="Self.FK_Resume_ToTable">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Resume" EntitySet="Resumes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Job_ToTable" Association="Self.FK_Job_ToTable">
+            <End Role="Recruiter" EntitySet="Recruiters" />
+            <End Role="Job" EntitySet="Jobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JobApply_ToTable_1" Association="Self.FK_JobApply_ToTable_1">
+            <End Role="Job" EntitySet="Jobs" />
+            <End Role="JobApply" EntitySet="JobApplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JobApply_ToTable" Association="Self.FK_JobApply_ToTable">
+            <End Role="Resume" EntitySet="Resumes" />
+            <End Role="JobApply" EntitySet="JobApplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ResumeFile_ToTable" Association="Self.FK_ResumeFile_ToTable">
+            <End Role="Resume" EntitySet="Resumes" />
+            <End Role="ResumeFile" EntitySet="ResumeFiles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="Model.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="Model.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="Model.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="Model.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserRoles">
+            <EntityTypeMapping TypeName="Model.AspNetUserRole">
+              <MappingFragment StoreEntitySet="AspNetUserRoles">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="AssignAt" ColumnName="AssignAt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="Model.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="CreatedAt" ColumnName="CreatedAt" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jobs">
+            <EntityTypeMapping TypeName="Model.Job">
+              <MappingFragment StoreEntitySet="Job">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="JobType" ColumnName="JobType" />
+                <ScalarProperty Name="JobLocation" ColumnName="JobLocation" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="JobSeeker" ColumnName="JobSeeker" />
+                <ScalarProperty Name="RecruiterId" ColumnName="RecruiterId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JobApplies">
+            <EntityTypeMapping TypeName="Model.JobApply">
+              <MappingFragment StoreEntitySet="JobApply">
+                <ScalarProperty Name="JobStatus" ColumnName="JobStatus" />
+                <ScalarProperty Name="Whats_your_dream_job_" ColumnName="Whats your dream job?" />
+                <ScalarProperty Name="Why_Should_we_hire_you_" ColumnName="Why Should we hire you?" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ApplyAt" ColumnName="ApplyAt" />
+                <ScalarProperty Name="ResumeId" ColumnName="ResumeId" />
+                <ScalarProperty Name="JobId" ColumnName="JobId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Recruiters">
+            <EntityTypeMapping TypeName="Model.Recruiter">
+              <MappingFragment StoreEntitySet="Recruiter">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resumes">
+            <EntityTypeMapping TypeName="Model.Resume">
+              <MappingFragment StoreEntitySet="Resume">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Dob" ColumnName="Dob" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ResumeFiles">
+            <EntityTypeMapping TypeName="Model.ResumeFile">
+              <MappingFragment StoreEntitySet="ResumeFile">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UploadedAt" ColumnName="UploadedAt" />
+                <ScalarProperty Name="Path" ColumnName="Path" />
+                <ScalarProperty Name="ResumeId" ColumnName="ResumeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
